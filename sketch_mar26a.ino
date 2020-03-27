@@ -11,6 +11,9 @@
 int motor= 6;
 int valveWater=7;
 int valveFoam=8;
+//int eStop=;
+//int startButton=;
+//int stopButton=;
 
 // Variables needed
 unsigned int programStep = 0;
@@ -18,6 +21,7 @@ unsigned long currentMillis = 0;
 unsigned long previousMillis = 0;
 //unsigned long stepDelay= 70000; // this value is in ms. 70000 = 70 sec.
 unsigned long stepDelay= 1000; // 1 sec step delay for testing purposes, fast!
+//unsigned int button;
 
 // instanciate lcd screen with correct connections.
 LiquidCrystal lcd(12, 11, 5, 4, 3, 2);  //define LCD pins (RS, E, D4, D5, D6, D7)
@@ -34,6 +38,46 @@ void setup() {
 // ----------------------------
 void loop() 
 {
+  // E-Stop detection
+  /*
+  button=digitalRead(eStop);
+  if(button==0) // E-Stop should be high when no emergency at present!!!
+  {
+    programStep=152;
+    
+    lcd.clear();
+    lcd.setCursor(0,0);
+    lcd.print(" E-stop detected");
+    lcd.setCursor(0,1);
+    lcd.print(" Reboot to");
+    lcd.setCursor(0,2);
+    lcd.print(" recover.
+
+    while(1)
+    {
+      // If we end up here, we stay here until reboot.
+    }
+  }
+  */
+  
+  // Start button
+  /* 
+  button = digitalRead(startButton);
+  if(button==1)
+  {
+    programStep=1;
+  }
+  */
+
+  // Stop button
+  /* 
+  button = digitalRead(stopButton);
+  if(button==1)
+  {
+    programStep=152;
+    
+  }
+  */
   
   // Update current time
   currentMillis = millis();
