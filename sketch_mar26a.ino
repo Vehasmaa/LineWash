@@ -3,6 +3,18 @@
  Two valves and motor. Nothing fancy, no e-stop or start/stop buttons.
  Those need to implemented before actual use!!!
 
+ Arduino Uno in this case used as hardware controller instead of plc.
+ Interfacing rest of electronics needed to drive contactors from 5V signals.
+
+ Uses 20x4 lcd as display.
+
+ Should work anything Arduino environment supports with little or no modifications.
+
+ As such nice demo if used with minimal electronics.
+
+ Author:
+ Jurva-Markus Vehasmaa
+
 */
 
 #include <LiquidCrystal.h>
